@@ -1,0 +1,12 @@
+FROM alpine
+MAINTAINER rickfast <rick.t.fast@gmail.com>
+RUN apk update && apk add nodejs
+<<<<<<< HEAD
+RUN apk update && apk add nginx
+=======
+RUN apk add nginx
+>>>>>>> add nginx paquage to container
+RUN mkdir average
+ADD average.js average/
+WORKDIR average
+ENTRYPOINT ["node","average.js"]
